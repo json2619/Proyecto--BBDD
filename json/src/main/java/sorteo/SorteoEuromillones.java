@@ -13,6 +13,10 @@ public class SorteoEuromillones extends Sorteo{
 		super(id, fecha_celebracion, tipoJuego, premio);
 	}
 	
+	public SorteoEuromillones(String fecha_celebracion, TipoJuego tipoJuego, int premio) {
+		super(fecha_celebracion, tipoJuego, premio);
+	}
+	
 	public void generarCombGanadora() {
 		int numero;
 		
@@ -34,7 +38,7 @@ public class SorteoEuromillones extends Sorteo{
 
 	@Override
 	public String toString() {
-		return "SorteoEuromillones [combinacionGanadora=" + Arrays.toString(combinacionGanadora) + ", estrellas="
+		return super.toString() + "SorteoEuromillones [combinacionGanadora=" + Arrays.toString(combinacionGanadora) + ", estrellas="
 				+ Arrays.toString(estrellas) + "]";
 	}
 	
