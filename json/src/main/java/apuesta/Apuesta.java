@@ -1,4 +1,4 @@
-package com.Gambling.json;
+package apuesta;
 
 public class Apuesta {
 
