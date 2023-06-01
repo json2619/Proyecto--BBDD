@@ -4,42 +4,46 @@ import java.util.Arrays;
 
 import com.Gambling.json.TipoJuego;
 
-public class SorteoEuromillones extends Sorteo{
+public class SorteoEuromillones extends Sorteo {
 
-	int[] combinacionGanadora = new int[5];
-	int[] estrellas = new int[2];
-	
+	private int[] combinacionGanadora = new int[5];
+	private int[] estrellas = new int[2];
+
 	public SorteoEuromillones(int id, String fecha_celebracion, TipoJuego tipoJuego, int premio) {
 		super(id, fecha_celebracion, tipoJuego, premio);
 	}
-	
+
 	public SorteoEuromillones(String fecha_celebracion, TipoJuego tipoJuego, int premio) {
 		super(fecha_celebracion, tipoJuego, premio);
+		this.combinacionGanadora = generarCombGanadora();
+		this.estrellas = generarEstrellas();
 	}
-	
-	public void generarCombGanadora() {
+
+	public int[] generarCombGanadora() {
 		int numero;
-		
+
 		for (int i = 0; i < combinacionGanadora.length; i++) {
 			numero = (int) (Math.random() * 10);
 			combinacionGanadora[i] = numero;
 		}
-		
+		return combinacionGanadora;
+
 	}
-	
-	public void generarEstrellas() {
+
+	public int[] generarEstrellas() {
 		int estrella;
-		
+
 		for (int i = 0; i < combinacionGanadora.length; i++) {
 			estrella = (int) (Math.random() * 10);
 			combinacionGanadora[i] = estrella;
 		}
+		return combinacionGanadora;
 	}
 
 	@Override
 	public String toString() {
-		return super.toString() + "SorteoEuromillones [combinacionGanadora=" + Arrays.toString(combinacionGanadora) + ", estrellas="
-				+ Arrays.toString(estrellas) + "]";
+		return super.toString() + "SorteoEuromillones [combinacionGanadora=" + Arrays.toString(combinacionGanadora)
+				+ ", estrellas=" + Arrays.toString(estrellas) + "]";
 	}
-	
+
 }
