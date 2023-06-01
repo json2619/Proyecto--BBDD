@@ -33,6 +33,15 @@ public class SorteoElGordo extends Sorteo {
 		return numClave = (int) (Math.random() * 10);
 	}
 
+	
+	public int[] getCombinacionGanadora() {
+		return combinacionGanadora;
+	}
+
+	public int getNumClave() {
+		return numClave;
+	}
+
 	@Override
 	public String toString() {
 		return super.toString() + "SorteoElGordo [combinacionGanadora=" + Arrays.toString(combinacionGanadora)

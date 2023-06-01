@@ -39,6 +39,20 @@ public class SorteoPrimitiva extends Sorteo {
 	public int generarReintegro() {
 		return complementario = (int) (Math.random() * 10);
 	}
+	
+	
+
+	public int[] getCombinacionGanadora() {
+		return combinacionGanadora;
+	}
+
+	public int getComplementario() {
+		return complementario;
+	}
+
+	public int getReintegro() {
+		return reintegro;
+	}
 
 	@Override
 	public String toString() {

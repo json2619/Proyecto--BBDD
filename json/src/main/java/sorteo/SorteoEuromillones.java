@@ -40,6 +40,15 @@ public class SorteoEuromillones extends Sorteo {
 		return combinacionGanadora;
 	}
 
+	
+	public int[] getCombinacionGanadora() {
+		return combinacionGanadora;
+	}
+
+	public int[] getEstrellas() {
+		return estrellas;
+	}
+
 	@Override
 	public String toString() {
 		return super.toString() + "SorteoEuromillones [combinacionGanadora=" + Arrays.toString(combinacionGanadora)

@@ -25,6 +25,15 @@ public class SorteoLotNacional extends Sorteo {
 		return reintegro = (int) (Math.random() * 10);
 	}
 
+	
+	public int getNumPremiado() {
+		return numPremiado;
+	}
+
+	public int getReintegro() {
+		return reintegro;
+	}
+
 	@Override
 	public String toString() {
 		return super.toString() + "SorteoLotNacional [numPremiado=" + numPremiado + ", reintegro=" + reintegro + "]";
