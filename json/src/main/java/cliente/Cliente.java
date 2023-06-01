@@ -1,4 +1,4 @@
-package com.Gambling.json;
+package cliente;
 
 import java.util.Scanner;
 
