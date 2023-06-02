@@ -4,7 +4,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 
-public class Connection {
+public class CrearConnection {
 
 	public java.sql.Connection crearConexion () throws ClassNotFoundException, SQLException {
 		java.sql.Connection conexion = null;

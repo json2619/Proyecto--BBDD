@@ -8,6 +8,8 @@ public class Apuesta {
 	private TipoJuego tipoApuesta;
 	private String fechApuesta;
 	private double precioApuesta;
+	private String correoCliente;
+	private int SorteoID;
 
 	public Apuesta(int id, TipoJuego tipoApuesta, String fechApuesta, double precioApuesta) {
 		this.id = id;
