@@ -27,7 +27,7 @@ public class CrearJSON {
 
 		String concat = "";
 		String fichero = "";
-		File f = new File("gambling.json");
+		File f = new File("elGordo.json");
 		try {
 
 			PrintWriter printWriter = new PrintWriter(new FileWriter(f));
@@ -61,7 +61,7 @@ public class CrearJSON {
 
 		String concat = "";
 		String fichero = "";
-		File f = new File("gambling.json");
+		File f = new File("primitiva.json");
 		try {
 
 			PrintWriter printWriter = new PrintWriter(new FileWriter(f));
@@ -95,7 +95,7 @@ public class CrearJSON {
 
 		String concat = "";
 		String fichero = "";
-		File f = new File("gambling.json");
+		File f = new File("euromillones.json");
 		try {
 
 			PrintWriter printWriter = new PrintWriter(new FileWriter(f));
@@ -129,7 +129,7 @@ public class CrearJSON {
 
 		String concat = "";
 		String fichero = "";
-		File f = new File("gambling.json");
+		File f = new File("lotNacional.json");
 		try {
 
 			PrintWriter printWriter = new PrintWriter(new FileWriter(f));
