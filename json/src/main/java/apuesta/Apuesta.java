@@ -13,13 +13,15 @@ public class Apuesta {
 	private String fechApuesta;
 	private double precioApuesta;
 	private String correoCliente;
-	private int SorteoID;
+	private int sorteoID;
 
-	public Apuesta(int id, TipoJuego tipoApuesta, String fechApuesta, double precioApuesta) {
+	public Apuesta(int id, TipoJuego tipoApuesta, String fechApuesta, double precioApuesta, String correoCliente, int sorteoID) {
 		this.id = id;
 		this.tipoApuesta = tipoApuesta;
 		this.fechApuesta = fechApuesta;
 		this.precioApuesta = precioApuesta;
+		this.correoCliente = correoCliente;
+		this.sorteoID = sorteoID;
 	}
 
 	public Apuesta(TipoJuego tipoApuesta, String fechApuesta, double precioApuesta) {
