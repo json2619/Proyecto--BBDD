@@ -38,7 +38,15 @@ public class Controlador {
                 switch (opcion) {
                     case 1:
                         Registrador registrar = new Registrador();
-                        registrar.insertrSocio(conexion, new Cliente(null, null, null, null));
+                        System.out.println("Ingrese su correo electrónico");
+                        String nvCorreo = teclado.next();
+                        System.out.println("Ingrese su correo electrónico");
+                        String nvContraseña = teclado.next();
+                        System.out.println("Ingrese su correo electrónico");
+                        String nvDni = teclado.next();
+                        System.out.println("Ingrese su correo electrónico");
+                        String nvTelefono = teclado.next();
+                        registrar.insertrSocio(conexion, new Cliente(nvCorreo, nvContraseña, nvDni, nvTelefono));
                         break;
                     case 2:
                         Acceso acceder = new Acceso();
