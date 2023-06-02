@@ -3,7 +3,9 @@ package result;
 import java.util.Arrays;
 
 import com.Gambling.json.TipoJuego;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ResultadoPrimitiva {
 
 	private int[] combinacionGanadora = new int[5];

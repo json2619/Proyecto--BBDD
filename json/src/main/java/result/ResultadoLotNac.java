@@ -1,7 +1,9 @@
 package result;
 
 import com.Gambling.json.TipoJuego;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ResultadoLotNac {
 
 	private int numPremiado;
