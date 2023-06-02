@@ -20,7 +20,7 @@ public class Controlador {
 	}
 	
 	public void menu(Connection conexion) throws SQLException {
-		Scanner sn = new Scanner(System.in);
+		Scanner teclado = new Scanner(System.in);
         boolean salir = false;
         int opcion; 
  
@@ -33,7 +33,7 @@ public class Controlador {
             try {
  
                 System.out.println("Escribe una de las opciones");
-                opcion = sn.nextInt();
+                opcion = teclado.nextInt();
  
                 switch (opcion) {
                     case 1:
@@ -43,7 +43,7 @@ public class Controlador {
                     case 2:
                         Acceso acceder = new Acceso();
                         System.out.println("Ingrese su correo electrónico");
-                        String correo = sn.next();
+                        String correo = teclado.next();
                         Cliente cliente = acceder.selectSocio(conexion, correo);
                         break;
                     case 3:
@@ -52,7 +52,7 @@ public class Controlador {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Debes insertar un número");
-                sn.next();
+                teclado.next();
             }
         }
 	}
