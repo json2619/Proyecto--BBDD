@@ -36,5 +36,9 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/josem/Desktop/ExamenT8_JoseMiguel/ExamenT8/lib/mysql-connector-java-8.0.18.jar"/>
+	<classpathentry kind="lib" path="C:/Users/josem/Downloads/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/josem/Downloads/jackson-annotations-2.15.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/josem/Downloads/jackson-core-2.15.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/josem/Downloads/jackson-databind-2.15.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
