@@ -17,6 +17,8 @@ public class Controlador {
 		Connection conexion = prueba.crearConexion();
 		Controlador realizarMenu = new Controlador();
 		realizarMenu.menu(conexion);
+		
+		prueba.disconnect(conexion);
 	}
 	
 	public void menu(Connection conexion) throws SQLException {
