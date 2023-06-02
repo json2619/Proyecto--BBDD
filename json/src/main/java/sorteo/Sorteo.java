@@ -14,25 +14,16 @@ public abstract class Sorteo {
 	private String fecha_apertura;
 	private String fecha_cierre;
 	private TipoJuego tipoJuego;
-	private int premio;
-
+	private String resultado;
+	
 	public Sorteo(int id, String fecha_celebracion, String fecha_apertura, String fecha_cierre, TipoJuego tipoJuego,
-			int premio) {
+			String resultado) {
 		this.id = id;
 		this.fecha_celebracion = fecha_celebracion;
 		this.fecha_apertura = fecha_apertura;
 		this.fecha_cierre = fecha_cierre;
 		this.tipoJuego = tipoJuego;
-		this.premio = premio;
-	}
-
-	public Sorteo(String fecha_celebracion, String fecha_apertura, String fecha_cierre, TipoJuego tipoJuego,
-			int premio) {
-		this.fecha_celebracion = fecha_celebracion;
-		this.fecha_apertura = fecha_apertura;
-		this.fecha_cierre = fecha_cierre;
-		this.tipoJuego = tipoJuego;
-		this.premio = premio;
+		this.resultado = resultado;
 	}
 
 	public int getId() {
@@ -75,18 +66,18 @@ public abstract class Sorteo {
 		this.tipoJuego = tipoJuego;
 	}
 
-	public int getPremio() {
-		return premio;
+	public String getResultado() {
+		return resultado;
 	}
 
-	public void setPremio(int premio) {
-		this.premio = premio;
+	public void setResultado(String resultado) {
+		this.resultado = resultado;
 	}
 
 	@Override
 	public String toString() {
 		return "Sorteo [id=" + id + ", fecha_celebracion=" + fecha_celebracion + ", fecha_apertura=" + fecha_apertura
-				+ ", fecha_cierre=" + fecha_cierre + ", tipoJuego=" + tipoJuego + ", premio=" + premio + "]";
+				+ ", fecha_cierre=" + fecha_cierre + ", tipoJuego=" + tipoJuego + ", resultado=" + resultado + "]";
 	}
 
 }

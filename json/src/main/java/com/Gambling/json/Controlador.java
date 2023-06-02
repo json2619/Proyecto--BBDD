@@ -33,7 +33,7 @@ public class Controlador {
  
             System.out.println("1. Registrarse");
             System.out.println("2. Acceder y crear apuesta");
-            System.out.println("3. salir");
+            System.out.println("3. Crear Apuesta");
  
             try {
  

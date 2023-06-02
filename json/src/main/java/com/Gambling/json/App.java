@@ -3,7 +3,8 @@ package com.Gambling.json;
 public class App {
 
 	public static void main(String[] args) {
-		Controlador prueba = new Controlador();
+		String palabra = String.valueOf(TipoJuego.ELGORDO);
+		System.out.println(palabra);
 	}
 
 }
