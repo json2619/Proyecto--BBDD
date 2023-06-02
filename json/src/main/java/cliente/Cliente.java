@@ -1,11 +1,14 @@
 package cliente;
 
 import java.util.Scanner;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
 /**
  * 
  * @author josemiguel
  *
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Cliente {
 
 	private String correo;

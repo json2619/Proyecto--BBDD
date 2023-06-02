@@ -22,6 +22,13 @@ public class App {
 		Sorteo sorteo = new Sorteo(1, new Date(123, 5, 10), new Date(123, 5, 2), new Date(123, 5, 8), TipoJuego.LOTNACIONAL);
 		Apuesta apuesta = new Apuesta(1, cliente.getCorreo(), sorteo.getId(), TipoJuego.LOTNACIONAL, new Date(123, 5, 3));
 		
+		//creando JSON de los objetos
+		
+		CrearJSON crearJSON = new CrearJSON();
+		crearJSON.creaJson(cliente);
+		crearJSON.creaJson(sorteo);
+		crearJSON.creaJson(apuesta);
+		
 		// InserCión de los objetos en la base de datos
 		Registrador registrarCliente = new Registrador();
 		registrarCliente.insertrSocio(conexion, cliente);

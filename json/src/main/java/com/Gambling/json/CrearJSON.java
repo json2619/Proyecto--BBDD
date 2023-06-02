@@ -13,6 +13,8 @@ import org.json.JSONObject;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 
+import apuesta.Apuesta;
+import cliente.Cliente;
 import result.Resultado;
 import result.ResultadoElGordo;
 import result.ResultadoEuromillones;
@@ -153,5 +155,61 @@ public class CrearJSON {
 			System.out.println("Error: " + ex.getLocalizedMessage());
 		}
 		return concat;
+	}
+	
+	public void creaJson(Cliente cliente) {
+
+		String fichero = "";
+		File f = new File("cliente.json");
+		try {
+
+			PrintWriter printWriter = new PrintWriter(new FileWriter(f));
+			String json2write = new ObjectMapper().writeValueAsString(cliente);
+			printWriter.print(json2write);
+			printWriter.flush();
+			printWriter.close();
+			} catch (FileNotFoundException ex) {
+			    System.out.println(ex.getMessage());
+			} catch (IOException ex) {
+			    System.out.println(ex.getMessage());
+			}
+	}
+	
+	public void creaJson(Apuesta apuesta) {
+
+		String fichero = "";
+		File f = new File("apuesta.json");
+		try {
+
+			PrintWriter printWriter = new PrintWriter(new FileWriter(f));
+			String json2write = new ObjectMapper().writeValueAsString(apuesta);
+			printWriter.print(json2write);
+			printWriter.flush();
+			printWriter.close();
+
+			} catch (FileNotFoundException ex) {
+			    System.out.println(ex.getMessage());
+			} catch (IOException ex) {
+			    System.out.println(ex.getMessage());
+			}
+	}
+	
+	public void creaJson(Sorteo sorteo) {
+
+		String fichero = "";
+		File f = new File("sorteo.json");
+		try {
+
+			PrintWriter printWriter = new PrintWriter(new FileWriter(f));
+			String json2write = new ObjectMapper().writeValueAsString(sorteo);
+			printWriter.print(json2write);
+			printWriter.flush();
+			printWriter.close();
+			
+			} catch (FileNotFoundException ex) {
+			    System.out.println(ex.getMessage());
+			} catch (IOException ex) {
+			    System.out.println(ex.getMessage());
+			}
 	}
 }

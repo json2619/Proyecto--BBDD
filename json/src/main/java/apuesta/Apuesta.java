@@ -4,6 +4,7 @@ import java.sql.Date;
 
 import com.Gambling.json.CrearJSON;
 import com.Gambling.json.TipoJuego;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 import result.ResultadoElGordo;
 import result.ResultadoEuromillones;
@@ -15,6 +16,7 @@ import result.ResultadoPrimitiva;
  * @author josemiguel
  *
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Apuesta {
 
 	private int id;
