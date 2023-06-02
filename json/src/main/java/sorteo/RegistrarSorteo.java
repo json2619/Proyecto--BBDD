@@ -20,7 +20,7 @@ public class RegistrarSorteo {
 			sentencia.setString(2, sorteo.getFecha_celebracion());
 			sentencia.setString(3, sorteo.getFecha_apertura());
 			sentencia.setString(4, sorteo.getFecha_cierre());
-			sentencia.setString(5, String.valueOf(sorteo.getTipoJuego()));
+			sentencia.setString(5, sorteo.getTipoJuego().getNombre());
 			sentencia.setString(6, sorteo.getResultado());
 			
 			sentencia.executeUpdate();

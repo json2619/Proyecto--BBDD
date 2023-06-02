@@ -1,6 +1,12 @@
 package apuesta;
 
+import com.Gambling.json.CrearJSON;
 import com.Gambling.json.TipoJuego;
+
+import result.ResultadoElGordo;
+import result.ResultadoEuromillones;
+import result.ResultadoLotNac;
+import result.ResultadoPrimitiva;
 
 /**
  * 
@@ -21,15 +27,9 @@ public abstract class Apuesta {
 		this.id = id;
 		this.tipoApuesta = tipoApuesta;
 		this.fechApuesta = fechApuesta;
-		this.serieNumérica = serieNumerica;
+		this.serieNumérica = crearSerieNumerica();
 		this.correoCliente = correoCliente;
 		this.sorteoID = sorteoID;
-	}
-
-	public Apuesta(TipoJuego tipoApuesta, String fechApuesta, String serieNumerica) {
-		this.tipoApuesta = tipoApuesta;
-		this.fechApuesta = fechApuesta;
-		this.serieNumérica = serieNumerica;
 	}
 
 	public int getId() {
@@ -70,6 +70,26 @@ public abstract class Apuesta {
 
 	public int getSorteoID() {
 		return sorteoID;
+	}
+	
+	public String crearSerieNumerica() {
+		String result;
+		CrearJSON crearJson = new CrearJSON();
+		
+		if (tipoApuesta.getNombre().equalsIgnoreCase("Loteria Nacional")) {
+			ResultadoLotNac resultNac = new ResultadoLotNac();
+			result = crearJson.creaJson(resultNac);
+		}else if(tipoApuesta.getNombre().equalsIgnoreCase("Euromillones")) {
+			ResultadoEuromillones resultEuro = new ResultadoEuromillones();
+			result = crearJson.creaJson(resultEuro);
+		}else if (tipoApuesta.getNombre().equalsIgnoreCase("El Gordo")) {
+			ResultadoElGordo resultGordo = new ResultadoElGordo();
+			result = crearJson.creaJson(resultGordo);
+		}else {
+			ResultadoPrimitiva resultPrim = new ResultadoPrimitiva();
+			result = crearJson.creaJson(resultPrim);
+		}
+		return result;
 	}
 
 	@Override

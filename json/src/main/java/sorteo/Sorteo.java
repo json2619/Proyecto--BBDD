@@ -1,6 +1,12 @@
 package sorteo;
 
+import com.Gambling.json.CrearJSON;
 import com.Gambling.json.TipoJuego;
+
+import result.ResultadoElGordo;
+import result.ResultadoEuromillones;
+import result.ResultadoLotNac;
+import result.ResultadoPrimitiva;
 
 /**
  * 
@@ -16,14 +22,13 @@ public abstract class Sorteo {
 	private TipoJuego tipoJuego;
 	private String resultado;
 	
-	public Sorteo(int id, String fecha_celebracion, String fecha_apertura, String fecha_cierre, TipoJuego tipoJuego,
-			String resultado) {
+	public Sorteo(int id, String fecha_celebracion, String fecha_apertura, String fecha_cierre, TipoJuego tipoJuego) {
 		this.id = id;
 		this.fecha_celebracion = fecha_celebracion;
 		this.fecha_apertura = fecha_apertura;
 		this.fecha_cierre = fecha_cierre;
 		this.tipoJuego = tipoJuego;
-		this.resultado = resultado;
+		this.resultado = crearResultado();
 	}
 
 	public int getId() {
@@ -70,8 +75,24 @@ public abstract class Sorteo {
 		return resultado;
 	}
 
-	public void setResultado(String resultado) {
-		this.resultado = resultado;
+	public String crearResultado() {
+		String result;
+		CrearJSON crearJson = new CrearJSON();
+		
+		if (tipoJuego.getNombre().equalsIgnoreCase("Loteria Nacional")) {
+			ResultadoLotNac resultNac = new ResultadoLotNac();
+			result = crearJson.creaJson(resultNac);
+		}else if(tipoJuego.getNombre().equalsIgnoreCase("Euromillones")) {
+			ResultadoEuromillones resultEuro = new ResultadoEuromillones();
+			result = crearJson.creaJson(resultEuro);
+		}else if (tipoJuego.getNombre().equalsIgnoreCase("El Gordo")) {
+			ResultadoElGordo resultGordo = new ResultadoElGordo();
+			result = crearJson.creaJson(resultGordo);
+		}else {
+			ResultadoPrimitiva resultPrim = new ResultadoPrimitiva();
+			result = crearJson.creaJson(resultPrim);
+		}
+		return result;
 	}
 
 	@Override
