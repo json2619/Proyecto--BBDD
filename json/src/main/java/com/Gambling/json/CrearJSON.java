@@ -45,7 +45,6 @@ public class CrearJSON {
 			    
 			    JSONObject objectJson = new JSONObject(fichero);
 			    concat = objectJson.getJSONArray("combinacionGanadora") + "  " + objectJson.getInt("numClave");
-			    System.out.println(concat);
 			} catch (FileNotFoundException ex) {
 			    System.out.println(ex.getMessage());
 			} catch (IOException ex) {
@@ -78,8 +77,7 @@ public class CrearJSON {
 			    
 			    
 			    JSONObject objectJson = new JSONObject(fichero);
-			    concat = objectJson.getJSONArray("combinacionGanadora") + "  " + objectJson.getInt("complememtario") + "  " + objectJson.getInt("reintegro");
-			    System.out.println(concat);
+			    concat = objectJson.getJSONArray("combinacionGanadora") + "  " + objectJson.getInt("complementario") + "  " + objectJson.getInt("reintegro");
 			} catch (FileNotFoundException ex) {
 			    System.out.println(ex.getMessage());
 			} catch (IOException ex) {
@@ -113,7 +111,6 @@ public class CrearJSON {
 			    
 			    JSONObject objectJson = new JSONObject(fichero);
 			    concat = objectJson.getJSONArray("combinacionGanadora") + "  " + objectJson.getJSONArray("estrellas");
-			    System.out.println(concat);
 			} catch (FileNotFoundException ex) {
 			    System.out.println(ex.getMessage());
 			} catch (IOException ex) {
@@ -147,7 +144,6 @@ public class CrearJSON {
 			    
 			    JSONObject objectJson = new JSONObject(fichero);
 			    concat = objectJson.getInt("numPremiado") + "  " + objectJson.getInt("reintegro");
-			    System.out.println(concat);
 			} catch (FileNotFoundException ex) {
 			    System.out.println(ex.getMessage());
 			} catch (IOException ex) {

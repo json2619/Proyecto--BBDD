@@ -1,5 +1,7 @@
 package sorteo;
 
+import java.sql.Date;
+
 import com.Gambling.json.CrearJSON;
 import com.Gambling.json.TipoJuego;
 
@@ -13,16 +15,16 @@ import result.ResultadoPrimitiva;
  * @author josemiguel
  *
  */
-public abstract class Sorteo {
+public class Sorteo {
 
 	private int id;
-	private String fecha_celebracion;
-	private String fecha_apertura;
-	private String fecha_cierre;
+	private Date fecha_celebracion;
+	private Date fecha_apertura;
+	private Date fecha_cierre;
 	private TipoJuego tipoJuego;
 	private String resultado;
 	
-	public Sorteo(int id, String fecha_celebracion, String fecha_apertura, String fecha_cierre, TipoJuego tipoJuego) {
+	public Sorteo(int id, Date fecha_celebracion, Date fecha_apertura, Date fecha_cierre, TipoJuego tipoJuego) {
 		this.id = id;
 		this.fecha_celebracion = fecha_celebracion;
 		this.fecha_apertura = fecha_apertura;
@@ -39,27 +41,27 @@ public abstract class Sorteo {
 		this.id = id;
 	}
 
-	public String getFecha_celebracion() {
+	public Date getFecha_celebracion() {
 		return fecha_celebracion;
 	}
 
-	public void setFecha_celebracion(String fecha_celebracion) {
+	public void setFecha_celebracion(Date fecha_celebracion) {
 		this.fecha_celebracion = fecha_celebracion;
 	}
 
-	public String getFecha_apertura() {
+	public Date getFecha_apertura() {
 		return fecha_apertura;
 	}
 
-	public void setFecha_apertura(String fecha_apertura) {
+	public void setFecha_apertura(Date fecha_apertura) {
 		this.fecha_apertura = fecha_apertura;
 	}
 
-	public String getFecha_cierre() {
+	public Date getFecha_cierre() {
 		return fecha_cierre;
 	}
 
-	public void setFecha_cierre(String fecha_cierre) {
+	public void setFecha_cierre(Date fecha_cierre) {
 		this.fecha_cierre = fecha_cierre;
 	}
 

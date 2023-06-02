@@ -1,5 +1,7 @@
 package apuesta;
 
+import java.sql.Date;
+
 import com.Gambling.json.CrearJSON;
 import com.Gambling.json.TipoJuego;
 
@@ -13,17 +15,16 @@ import result.ResultadoPrimitiva;
  * @author josemiguel
  *
  */
-public abstract class Apuesta {
+public class Apuesta {
 
 	private int id;
 	private TipoJuego tipoApuesta;
-	private String fechApuesta;
+	private Date fechApuesta;
 	private String serieNumérica;
 	private String correoCliente;
 	private int sorteoID;
 
-	public Apuesta(int id, String correoCliente, int sorteoID, TipoJuego tipoApuesta, String fechApuesta,
-			String serieNumerica) {
+	public Apuesta(int id, String correoCliente, int sorteoID, TipoJuego tipoApuesta, Date fechApuesta) {
 		this.id = id;
 		this.tipoApuesta = tipoApuesta;
 		this.fechApuesta = fechApuesta;
@@ -48,11 +49,11 @@ public abstract class Apuesta {
 		this.tipoApuesta = tipoApuesta;
 	}
 
-	public String getFechApuesta() {
+	public Date getFechApuesta() {
 		return fechApuesta;
 	}
 
-	public void setFechApuesta(String fechApuesta) {
+	public void setFechApuesta(Date fechApuesta) {
 		this.fechApuesta = fechApuesta;
 	}
 

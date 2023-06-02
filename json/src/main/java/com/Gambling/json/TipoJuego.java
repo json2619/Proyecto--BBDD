@@ -6,7 +6,7 @@ package com.Gambling.json;
  */
 public enum TipoJuego {
 
-	EUROMILLONES("Euromillones"), LOTNACIONAL("Loteria Naciona"), PRIMITIVA("Primitiva"), ELGORDO("El Gordo ");
+	EUROMILLONES("Euromillones"), LOTNACIONAL("Loteria Nacional"), PRIMITIVA("Primitiva"), ELGORDO("El Gordo");
 	
 	private String nombre;
 

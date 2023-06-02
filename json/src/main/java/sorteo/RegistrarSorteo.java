@@ -17,9 +17,9 @@ public class RegistrarSorteo {
 			String sql = "INSERT INTO sorteo VALUES (?, ? , ?, ?, ?, ?)";
 			sentencia = connection.prepareStatement(sql);
 			sentencia.setInt(1, sorteo.getId());
-			sentencia.setString(2, sorteo.getFecha_celebracion());
-			sentencia.setString(3, sorteo.getFecha_apertura());
-			sentencia.setString(4, sorteo.getFecha_cierre());
+			sentencia.setDate(2, sorteo.getFecha_celebracion());
+			sentencia.setDate(3, sorteo.getFecha_apertura());
+			sentencia.setDate(4, sorteo.getFecha_cierre());
 			sentencia.setString(5, sorteo.getTipoJuego().getNombre());
 			sentencia.setString(6, sorteo.getResultado());
 			

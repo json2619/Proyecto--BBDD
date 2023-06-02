@@ -14,13 +14,13 @@ public class RegistrarApuesta {
 		ResultSet generatedKeys = null;
 		
 		try {
-			String sql = "INSERT INTO sorteo VALUES (?, ? , ?, ?, ?, ?)";
+			String sql = "INSERT INTO apuesta VALUES (?, ? , ?, ?, ?, ?)";
 			sentencia = connection.prepareStatement(sql);
 			sentencia.setInt(1, apuesta.getId());
 			sentencia.setInt(2, apuesta.getSorteoID());
 			sentencia.setString(3, apuesta.getCorreoCliente());
 			sentencia.setString(4, apuesta.getTipoApuesta().getNombre());
-			sentencia.setString(5, apuesta.getFechApuesta());
+			sentencia.setDate(5, apuesta.getFechApuesta());
 			sentencia.setString(6, apuesta.getSerieNumérica());
 			
 			sentencia.executeUpdate();
