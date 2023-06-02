@@ -15,7 +15,6 @@ import com.fasterxml.jackson.databind.util.JSONPObject;
 
 import apuesta.Apuesta;
 import cliente.Cliente;
-import result.Resultado;
 import result.ResultadoElGordo;
 import result.ResultadoEuromillones;
 import result.ResultadoLotNac;
