@@ -6,7 +6,7 @@ import com.Gambling.json.TipoJuego;
  * @author josemiguel
  *
  */
-public class Sorteo {
+public abstract class Sorteo {
 
 	private int id;
 	private String fecha_celebracion;
