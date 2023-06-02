@@ -1,7 +1,11 @@
 package sorteo;
 
 import com.Gambling.json.TipoJuego;
-
+/**
+ * 
+ * @author josemiguel
+ *
+ */
 public class Sorteo {
 
 	private int id;
