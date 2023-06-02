@@ -12,7 +12,7 @@ import cliente.Registrador;
 
 public class Controlador {
 
-	public static void main() throws ClassNotFoundException, SQLException {
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		CrearConnection prueba = new CrearConnection();
 		Connection conexion = prueba.crearConexion();
 		Controlador realizarMenu = new Controlador();
