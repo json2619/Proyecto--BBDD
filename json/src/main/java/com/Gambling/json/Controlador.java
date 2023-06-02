@@ -9,7 +9,11 @@ import conexion.*;
 import cliente.Acceso;
 import cliente.Cliente;
 import cliente.Registrador;
-
+/**
+ * 
+ * @author josemiguel
+ *
+ */
 public class Controlador {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {

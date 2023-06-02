@@ -1,7 +1,11 @@
 package cliente;
 
 import java.util.Scanner;
-
+/**
+ * 
+ * @author josemiguel
+ *
+ */
 public class Cliente {
 
 	private String correo;

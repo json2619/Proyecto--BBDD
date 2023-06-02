@@ -4,7 +4,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-
+/**
+ * 
+ * @author josemiguel
+ *
+ */
 public class CrearConnection {
 
 	public Connection crearConexion () throws ClassNotFoundException, SQLException {

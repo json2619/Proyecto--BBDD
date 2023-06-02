@@ -4,7 +4,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+/**
+ * 
+ * @author josemiguel
+ *
+ */
 public class Acceso {
 
 	public Cliente selectSocio(Connection connection, String correoCliente) throws SQLException{

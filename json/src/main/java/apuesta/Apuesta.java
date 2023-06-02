@@ -1,7 +1,11 @@
 package apuesta;
 
 import com.Gambling.json.TipoJuego;
-
+/**
+ * 
+ * @author josemiguel
+ *
+ */
 public class Apuesta {
 
 	private int id;
