@@ -12,7 +12,7 @@ public class Acceso {
 		PreparedStatement sentencia = null;
 		ResultSet resultado = null;
 		try {
-			String sql = "SELECT * FROM SOCIO WHERE CORREO LIKE ?";
+			String sql = "SELECT * FROM jugador WHERE correo LIKE ?";
 			sentencia = connection.prepareStatement(sql);
 			sentencia.setString(1, correoCliente);
 			resultado = sentencia.executeQuery();

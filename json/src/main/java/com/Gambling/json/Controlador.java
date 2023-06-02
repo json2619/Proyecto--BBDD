@@ -14,11 +14,10 @@ public class Controlador {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		CrearConnection prueba = new CrearConnection();
-		Connection conexion = prueba.crearConexion();
 		Controlador realizarMenu = new Controlador();
-		realizarMenu.menu(conexion);
+		realizarMenu.menu(prueba.crearConexion());
 		
-		prueba.disconnect(conexion);
+		prueba.disconnect(prueba.crearConexion());
 	}
 	
 	public void menu(Connection conexion) throws SQLException {
@@ -50,7 +49,8 @@ public class Controlador {
                         String nvTelefono = teclado.next();
                         System.out.println("Ingrese el saldo de inicio");
                         double nvSAldo = teclado.nextDouble();
-                        registrar.insertrSocio(conexion, new Cliente(nvCorreo, nvContraseña, nvDni, nvTelefono, nvSAldo));
+                        Cliente nvCliente = new Cliente(nvCorreo, nvContraseña, nvDni, nvTelefono, nvSAldo);
+                        registrar.insertrSocio(conexion, nvCliente);
                         break;
                     case 2:
                         Acceso acceder = new Acceso();
