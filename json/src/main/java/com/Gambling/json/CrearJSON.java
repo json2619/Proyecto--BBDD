@@ -21,14 +21,13 @@ public class CrearJSON {
 
 	public String creaJson(Sorteo sorteo) {
 
-		ResultadoElGordo resultadoEG = new ResultadoElGordo();
 		String concat = "";
 		String fichero = "";
 		File f = new File("gambling.json");
 		try {
 
 			PrintWriter printWriter = new PrintWriter(new FileWriter(f));
-			String json2write = new ObjectMapper().writeValueAsString(resultadoEG);
+			String json2write = new ObjectMapper().writeValueAsString(sorteo);
 			printWriter.print(json2write);
 			printWriter.flush();
 			printWriter.close();
