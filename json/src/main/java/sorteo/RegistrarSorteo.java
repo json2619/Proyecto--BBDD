@@ -6,7 +6,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import cliente.Cliente;
-
+/**
+ * 
+ * @author jose miguel
+ *
+ */
 public class RegistrarSorteo {
 
 	public void insertarSorteo(Connection connection, Sorteo sorteo) throws SQLException {

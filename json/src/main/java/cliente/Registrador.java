@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 /**
  * 
- * @author josemiguel
+ * @author jose miguel
  *
  */
 public class Registrador {

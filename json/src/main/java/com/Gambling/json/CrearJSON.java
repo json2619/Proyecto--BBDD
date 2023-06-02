@@ -22,7 +22,11 @@ import result.ResultadoLotNac;
 import result.ResultadoPrimitiva;
 import sorteo.Sorteo;
 
-
+/**
+ * 
+ * @author jose miguel
+ *
+ */
 public class CrearJSON {
 
 	public String creaJson(ResultadoElGordo resultado) {

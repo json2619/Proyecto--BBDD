@@ -5,7 +5,7 @@ import java.util.Scanner;
 import com.fasterxml.jackson.annotation.JsonInclude;
 /**
  * 
- * @author josemiguel
+ * @author jose miguel
  *
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)

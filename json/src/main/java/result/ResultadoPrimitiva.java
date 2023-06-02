@@ -4,7 +4,11 @@ import java.util.Arrays;
 
 import com.Gambling.json.TipoJuego;
 import com.fasterxml.jackson.annotation.JsonInclude;
-
+/**
+ * 
+ * @author jose miguel
+ *
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ResultadoPrimitiva {
 

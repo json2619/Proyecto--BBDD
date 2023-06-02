@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 /**
  * 
- * @author josemiguel
+ * @author jose miguel
  *
  */
 public class CrearConnection {

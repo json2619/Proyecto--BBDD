@@ -13,7 +13,7 @@ import result.ResultadoPrimitiva;
 
 /**
  * 
- * @author josemiguel
+ * @author jose miguel
  *
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)

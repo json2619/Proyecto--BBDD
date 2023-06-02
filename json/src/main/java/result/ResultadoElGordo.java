@@ -2,9 +2,13 @@ package result;
 
 import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
-
+/**
+ * 
+ * @author jose miguel
+ *
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class ResultadoElGordo extends Resultado{
+public class ResultadoElGordo {
 
 	private int[] combinacionGanadora = new int[5];
 	private int numClave;

@@ -11,7 +11,11 @@ import com.Gambling.json.TipoJuego;
 import apuesta.Apuesta;
 import cliente.Cliente;
 import sorteo.Sorteo;
-
+/**
+ * 
+ * @author jose miguel
+ *
+ */
 public class Select {
 
 	public Cliente selectCliente(Connection connection) throws SQLException{
@@ -51,7 +55,7 @@ public class Select {
 		PreparedStatement sentencia = null;
 		ResultSet resultado = null;
 		try {
-			String sql = "SELECT * FROM SOCIO";
+			String sql = "SELECT * FROM sorteo";
 			sentencia = connection.prepareStatement(sql);
 			resultado = sentencia.executeQuery();
 			 while (resultado.next()) {
@@ -61,7 +65,7 @@ public class Select {
 				 Date fecha_cierre = resultado.getDate("FECHA_CIERRE");
 				 String tipoSorteo = resultado.getString("TIPO_JUEGO");
 				 String result = resultado.getString("COMBINACION_GANADORA");
-				sorteo = new Sorteo(id, fecha_celebracion, fecha_apertura, fecha_cierre, TipoJuego.valueOf(tipoSorteo.toUpperCase()), result);
+				sorteo = new Sorteo(id, fecha_celebracion, fecha_apertura, fecha_cierre, findEnumValue(tipoSorteo), result);
 			 }
 		} catch (SQLException sqle) {
 			sqle.getStackTrace();
@@ -84,11 +88,18 @@ public class Select {
 		PreparedStatement sentencia = null;
 		ResultSet resultado = null;
 		try {
-			String sql = "SELECT * FROM SOCIO";
+			String sql = "SELECT * FROM apuesta";
 			sentencia = connection.prepareStatement(sql);
 			resultado = sentencia.executeQuery();
 			 while (resultado.next()) {
+				 int id = resultado.getInt("ID");
+				 String tipoSorteo = resultado.getString("TIPO_JUEGO");
+				 Date fechApuesta = resultado.getDate("FECHA_APUESTA");
+				 String serieNumerica = resultado.getString("SERIE_NUMERICA");
+				 String correoCliente = resultado.getString("JUGADOR_CORREO");
+				 int sorteoID = resultado.getInt("SORTEO_ID");
 				 
+				 apuesta = new Apuesta(id, findEnumValue(tipoSorteo), fechApuesta, serieNumerica, correoCliente, sorteoID);
 			 }
 		} catch (SQLException sqle) {
 			sqle.getStackTrace();
@@ -105,4 +116,19 @@ public class Select {
 		return apuesta;
 		
 	}
+	
+	public TipoJuego findEnumValue(String cadena) {
+        switch (cadena) {
+            case "Loteria Nacional":
+                return TipoJuego.LOTNACIONAL;
+            case "Euromillones":
+                return TipoJuego.EUROMILLONES;
+            case "Primitiva":
+                return TipoJuego.PRIMITIVA;
+            case "El Gordo":
+                return TipoJuego.ELGORDO; 
+            default:
+                throw new IllegalArgumentException("El valor proporcionado no corresponde a ningún elemento del enumerado.");
+        }
+    }
 }

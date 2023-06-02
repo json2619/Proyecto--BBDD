@@ -1,7 +1,7 @@
 package com.Gambling.json;
 /**
  * 
- * @author josemiguel
+ * @author jose miguel
  *
  */
 public enum TipoJuego {
