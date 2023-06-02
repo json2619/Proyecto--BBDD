@@ -40,13 +40,15 @@ public class Controlador {
                         Registrador registrar = new Registrador();
                         System.out.println("Ingrese su correo electrónico");
                         String nvCorreo = teclado.next();
-                        System.out.println("Ingrese su correo electrónico");
+                        System.out.println("Ingrese una contraseña");
                         String nvContraseña = teclado.next();
-                        System.out.println("Ingrese su correo electrónico");
+                        System.out.println("Ingrese su dni");
                         String nvDni = teclado.next();
-                        System.out.println("Ingrese su correo electrónico");
+                        System.out.println("Ingrese su telefono");
                         String nvTelefono = teclado.next();
-                        registrar.insertrSocio(conexion, new Cliente(nvCorreo, nvContraseña, nvDni, nvTelefono));
+                        System.out.println("Ingrese el saldo de inicio");
+                        double nvSAldo = teclado.nextDouble();
+                        registrar.insertrSocio(conexion, new Cliente(nvCorreo, nvContraseña, nvDni, nvTelefono, nvSAldo));
                         break;
                     case 2:
                         Acceso acceder = new Acceso();

@@ -10,24 +10,15 @@ public class Cliente {
 	private String telefono;
 	private double saldo;
 
-	public Cliente(String correo, String contraseña, String dni, String telefono) {
+	public Cliente(String correo, String contraseña, String dni, String telefono, double saldo) {
 		this.correo = correo;
 		this.contraseña = contraseña;
 		this.dni = dni;
 		this.telefono = telefono;
-		this.saldo = ingresarSaldo();
+		this.saldo = saldo;
 	}
 
 	public Cliente() {
-	}
-
-	public double ingresarSaldo() {
-		Scanner teclado = new Scanner(System.in);
-		double dinero;
-
-		System.out.println("Ingrese saldo");
-		dinero = teclado.nextDouble();
-		return this.saldo = dinero;
 	}
 
 	public String getCorreo() {

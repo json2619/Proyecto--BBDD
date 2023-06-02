@@ -21,7 +21,8 @@ public class Acceso {
 				 String contraseña = resultado.getString("CONTRASEÑA");
 				 String dni = resultado.getString("DNI");
 				 String telefono = resultado.getString("TELEFONO");
-				 socio = new Cliente(correo, contraseña, dni, telefono);
+				 double saldo = resultado.getDouble("SALDO");
+				 socio = new Cliente(correo, contraseña, dni, telefono, saldo);
 			 }
 		} catch (SQLException sqle) {
 			sqle.getStackTrace();
