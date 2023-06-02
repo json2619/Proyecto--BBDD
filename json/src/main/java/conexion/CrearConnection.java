@@ -1,13 +1,14 @@
 package conexion;
 
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 
 public class CrearConnection {
 
-	public java.sql.Connection crearConexion () throws ClassNotFoundException, SQLException {
-		java.sql.Connection conexion = null;
+	public Connection crearConexion () throws ClassNotFoundException, SQLException {
+		Connection conexion = null;
 		
 		try {
 			 Class.forName("com.mysql.cj.jdbc.Driver");
@@ -23,5 +24,17 @@ public class CrearConnection {
 			 throw sqle;
 			}
 		return conexion;
+	}
+	
+	public void disconnect(Connection connection) throws SQLException {
+		try {
+			if (null != connection) {
+				connection.close();
+				connection = null;
+			}
+		} catch(SQLException e) {
+			e.printStackTrace();
+			throw e;
+		}
 	}
 }
