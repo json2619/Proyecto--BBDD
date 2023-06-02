@@ -6,7 +6,7 @@ import com.Gambling.json.TipoJuego;
  * @author josemiguel
  *
  */
-public class Apuesta {
+public abstract class Apuesta {
 
 	private int id;
 	private TipoJuego tipoApuesta;
