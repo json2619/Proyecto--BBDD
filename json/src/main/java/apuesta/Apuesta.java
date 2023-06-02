@@ -1,6 +1,7 @@
 package apuesta;
 
 import com.Gambling.json.TipoJuego;
+
 /**
  * 
  * @author josemiguel
@@ -15,7 +16,8 @@ public abstract class Apuesta {
 	private String correoCliente;
 	private int sorteoID;
 
-	public Apuesta(int id, String correoCliente, int sorteoID, TipoJuego tipoApuesta, String fechApuesta, String serieNumerica) {
+	public Apuesta(int id, String correoCliente, int sorteoID, TipoJuego tipoApuesta, String fechApuesta,
+			String serieNumerica) {
 		this.id = id;
 		this.tipoApuesta = tipoApuesta;
 		this.fechApuesta = fechApuesta;
@@ -30,6 +32,30 @@ public abstract class Apuesta {
 		this.serieNumérica = serieNumerica;
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public TipoJuego getTipoApuesta() {
+		return tipoApuesta;
+	}
+
+	public void setTipoApuesta(TipoJuego tipoApuesta) {
+		this.tipoApuesta = tipoApuesta;
+	}
+
+	public String getFechApuesta() {
+		return fechApuesta;
+	}
+
+	public void setFechApuesta(String fechApuesta) {
+		this.fechApuesta = fechApuesta;
+	}
+
 	public String getSerieNumérica() {
 		return serieNumérica;
 	}
@@ -38,16 +64,12 @@ public abstract class Apuesta {
 		this.serieNumérica = serieNumérica;
 	}
 
-	public int getId() {
-		return id;
+	public String getCorreoCliente() {
+		return correoCliente;
 	}
 
-	public TipoJuego getTipoApuesta() {
-		return tipoApuesta;
-	}
-
-	public String getFechApuesta() {
-		return fechApuesta;
+	public int getSorteoID() {
+		return sorteoID;
 	}
 
 	@Override

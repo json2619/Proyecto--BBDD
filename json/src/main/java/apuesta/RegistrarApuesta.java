@@ -1,27 +1,27 @@
-package sorteo;
+package apuesta;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import cliente.Cliente;
+import sorteo.Sorteo;
 
-public class RegistrarSorteo {
+public class RegistrarApuesta {
 
-	public void insertarSorteo(Connection connection, Sorteo sorteo) throws SQLException {
+	public void insertarApuesta(Connection connection, Apuesta apuesta) throws SQLException {
 		PreparedStatement sentencia = null;
 		ResultSet generatedKeys = null;
 		
 		try {
 			String sql = "INSERT INTO sorteo VALUES (?, ? , ?, ?, ?, ?)";
 			sentencia = connection.prepareStatement(sql);
-			sentencia.setInt(1, sorteo.getId());
-			sentencia.setString(2, sorteo.getFecha_celebracion());
-			sentencia.setString(3, sorteo.getFecha_apertura());
-			sentencia.setString(4, sorteo.getFecha_cierre());
-			sentencia.setString(5, String.valueOf(sorteo.getTipoJuego()));
-			sentencia.setString(6, sorteo.getResultado());
+			sentencia.setInt(1, apuesta.getId());
+			sentencia.setInt(2, apuesta.getSorteoID());
+			sentencia.setString(3, apuesta.getCorreoCliente());
+			sentencia.setString(4, String.valueOf(apuesta.getTipoApuesta()));
+			sentencia.setString(5, apuesta.getFechApuesta());
+			sentencia.setString(6, apuesta.getSerieNumérica());
 			
 			sentencia.executeUpdate();
 			
