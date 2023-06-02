@@ -4,48 +4,34 @@ import java.util.Arrays;
 
 import com.Gambling.json.TipoJuego;
 
+import result.ResultadoElGordo;
+
 public class SorteoElGordo extends Sorteo {
 
-	private int[] combinacionGanadora = new int[5];
-	private int numClave;
+	ResultadoElGordo resultado;
 
-	public SorteoElGordo(int id, String fecha_celebracion, TipoJuego tipoJuego, int premio) {
+	public SorteoElGordo(int id, String fecha_celebracion, TipoJuego tipoJuego, int premio, ResultadoElGordo resultado) {
 		super(id, fecha_celebracion, tipoJuego, premio);
+		this.resultado = resultado;
 	}
 
 	public SorteoElGordo(String fecha_celebracion, TipoJuego tipoJuego, int premio) {
 		super(fecha_celebracion, tipoJuego, premio);
-		this.combinacionGanadora = generarCombGanadora();
-		this.numClave = generarnumClave();
 	}
 
-	public int[] generarCombGanadora() {
-		int numero;
-
-		for (int i = 0; i < combinacionGanadora.length; i++) {
-			numero = (int) (Math.random() * 10);
-			combinacionGanadora[i] = numero;
-		}
-		return combinacionGanadora;
+	public ResultadoElGordo getResultado() {
+		return resultado;
 	}
 
-	public int generarnumClave() {
-		return numClave = (int) (Math.random() * 10);
-	}
-
-	
-	public int[] getCombinacionGanadora() {
-		return combinacionGanadora;
-	}
-
-	public int getNumClave() {
-		return numClave;
+	public void setResultado(ResultadoElGordo resultado) {
+		this.resultado = resultado;
 	}
 
 	@Override
 	public String toString() {
-		return super.toString() + "SorteoElGordo [combinacionGanadora=" + Arrays.toString(combinacionGanadora)
-				+ ", numClave=" + numClave + "]";
+		return super.toString() + "SorteoElGordo [resultado=" + resultado + "]";
 	}
+
+	
 
 }
