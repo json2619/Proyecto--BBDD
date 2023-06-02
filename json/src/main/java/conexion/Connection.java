@@ -11,7 +11,7 @@ public class Connection {
 		
 		try {
 			 Class.forName("com.mysql.cj.jdbc.Driver");
-			 conexion=DriverManager.getConnection("jdbc:mysql://192.168.56.103:3306/gambling","furiosa", "Imperat0r!");
+			 conexion=DriverManager.getConnection("jdbc:mysql://192.168.56.103:3306/gambling?serverTimezone=UTC","furiosa", "Imperat0r!");
 			 conexion.setAutoCommit(false);
 			} catch (ClassNotFoundException cnfe) {
 			 System.out.println("Error. No se ha podido cargar el driver");
@@ -23,10 +23,5 @@ public class Connection {
 			 throw sqle;
 			}
 		return conexion;
-	}
-	
-	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		Connection prueba = new Connection();
-		prueba.crearConexion();
 	}
 }
