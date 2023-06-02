@@ -35,6 +35,18 @@ public class Sorteo {
 		this.resultado = crearResultado();
 	}
 
+	public Sorteo(int id, Date fecha_celebracion, Date fecha_apertura, Date fecha_cierre, TipoJuego tipoJuego,
+			String resultado) {
+		this.id = id;
+		this.fecha_celebracion = fecha_celebracion;
+		this.fecha_apertura = fecha_apertura;
+		this.fecha_cierre = fecha_cierre;
+		this.tipoJuego = tipoJuego;
+		this.resultado = resultado;
+	}
+
+
+
 	public int getId() {
 		return id;
 	}

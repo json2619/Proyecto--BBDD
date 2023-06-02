@@ -35,6 +35,18 @@ public class Apuesta {
 		this.sorteoID = sorteoID;
 	}
 
+	public Apuesta(int id, TipoJuego tipoApuesta, Date fechApuesta, String serieNumérica, String correoCliente,
+			int sorteoID) {
+		this.id = id;
+		this.tipoApuesta = tipoApuesta;
+		this.fechApuesta = fechApuesta;
+		this.serieNumérica = serieNumérica;
+		this.correoCliente = correoCliente;
+		this.sorteoID = sorteoID;
+	}
+
+
+
 	public int getId() {
 		return id;
 	}
