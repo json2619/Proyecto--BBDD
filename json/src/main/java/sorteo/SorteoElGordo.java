@@ -8,22 +8,27 @@ import result.ResultadoElGordo;
 
 public class SorteoElGordo extends Sorteo {
 
-	ResultadoElGordo resultado;
-
-	public SorteoElGordo(int id, String fecha_celebracion, TipoJuego tipoJuego, int premio, ResultadoElGordo resultado) {
-		super(id, fecha_celebracion, tipoJuego, premio);
+	String resultado;
+	
+	public SorteoElGordo(int id, String fecha_celebracion, String fecha_apertura, String fecha_cierre,
+			TipoJuego tipoJuego, int premio, String resultado) {
+		super(id, fecha_celebracion, fecha_apertura, fecha_cierre, tipoJuego, premio);
 		this.resultado = resultado;
 	}
 
-	public SorteoElGordo(String fecha_celebracion, TipoJuego tipoJuego, int premio) {
-		super(fecha_celebracion, tipoJuego, premio);
+	
+	public SorteoElGordo(String fecha_celebracion, String fecha_apertura, String fecha_cierre,
+			TipoJuego tipoJuego, int premio, String resultado) {
+		super(fecha_celebracion, fecha_apertura, fecha_cierre, tipoJuego, premio);
+		this.resultado = resultado;
 	}
 
-	public ResultadoElGordo getResultado() {
+
+	public String getResultado() {
 		return resultado;
 	}
 
-	public void setResultado(ResultadoElGordo resultado) {
+	public void setResultado(String resultado) {
 		this.resultado = resultado;
 	}
 
