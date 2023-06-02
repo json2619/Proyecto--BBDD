@@ -18,6 +18,9 @@ public class Cliente {
 		this.saldo = ingresarSaldo();
 	}
 
+	public Cliente() {
+	}
+
 	public double ingresarSaldo() {
 		Scanner teclado = new Scanner(System.in);
 		double dinero;
