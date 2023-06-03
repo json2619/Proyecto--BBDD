@@ -2,10 +2,8 @@ package apuesta;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import sorteo.Sorteo;
 /**
  * 
  * @author jose miguel
@@ -15,7 +13,6 @@ public class RegistrarApuesta {
 
 	public void insertarApuesta(Connection connection, Apuesta apuesta) throws SQLException {
 		PreparedStatement sentencia = null;
-		ResultSet generatedKeys = null;
 		
 		try {
 			String sql = "INSERT INTO apuesta VALUES (?, ? , ?, ?, ?, ?)";
