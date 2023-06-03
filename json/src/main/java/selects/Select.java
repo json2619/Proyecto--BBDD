@@ -18,13 +18,14 @@ import sorteo.Sorteo;
  */
 public class Select {
 
-	public Cliente selectCliente(Connection connection) throws SQLException{
+	public Cliente selectCliente(Connection connection, String correoJugador) throws SQLException{
 		Cliente cliente = null;
 		PreparedStatement sentencia = null;
 		ResultSet resultado = null;
 		try {
-			String sql = "SELECT * FROM jugador";
+			String sql = "SELECT * FROM jugador WHERE CORREO = ?";
 			sentencia = connection.prepareStatement(sql);
+			sentencia.setNString(1, correoJugador);
 			resultado = sentencia.executeQuery();
 			 while (resultado.next()) {
 				 String correo = resultado.getString("CORREO");
@@ -50,13 +51,14 @@ public class Select {
 		
 	}
 	
-	public Sorteo selectSorteo(Connection connection) throws SQLException{
+	public Sorteo selectSorteo(Connection connection, int codigoSorteo) throws SQLException{
 		Sorteo sorteo = null;
 		PreparedStatement sentencia = null;
 		ResultSet resultado = null;
 		try {
-			String sql = "SELECT * FROM sorteo";
+			String sql = "SELECT * FROM sorteo WHERE ID = ?";
 			sentencia = connection.prepareStatement(sql);
+			sentencia.setInt(1, codigoSorteo);
 			resultado = sentencia.executeQuery();
 			 while (resultado.next()) {
 				 int id = resultado.getInt("ID");
@@ -83,13 +85,14 @@ public class Select {
 		
 	}
 	
-	public Apuesta selectApuesta(Connection connection) throws SQLException{
+	public Apuesta selectApuesta(Connection connection, int codigoApuesta) throws SQLException{
 		Apuesta apuesta = null;
 		PreparedStatement sentencia = null;
 		ResultSet resultado = null;
 		try {
-			String sql = "SELECT * FROM apuesta";
+			String sql = "SELECT * FROM apuesta WHERE ID = ?";
 			sentencia = connection.prepareStatement(sql);
+			sentencia.setInt(1, codigoApuesta);
 			resultado = sentencia.executeQuery();
 			 while (resultado.next()) {
 				 int id = resultado.getInt("ID");

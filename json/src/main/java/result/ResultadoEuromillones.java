@@ -34,11 +34,11 @@ public class ResultadoEuromillones {
 	public int[] generarEstrellas() {
 		int estrella;
 
-		for (int i = 0; i < combinacionGanadora.length; i++) {
+		for (int i = 0; i < estrellas.length; i++) {
 			estrella = (int) (Math.random() * 10);
-			combinacionGanadora[i] = estrella;
+			estrellas[i] = estrella;
 		}
-		return combinacionGanadora;
+		return estrellas;
 	}
 
 	
