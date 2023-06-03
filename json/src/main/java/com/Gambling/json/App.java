@@ -37,9 +37,8 @@ public class App {
 		Sorteo sorteo4 = new Sorteo(4, new Date(123, 5, 20), new Date(123, 5, 10), new Date(123, 5, 19), TipoJuego.PRIMITIVA);
 		Apuesta apuesta4 = new Apuesta(4, cliente.getCorreo(), sorteo4.getId(), TipoJuego.PRIMITIVA, new Date(123, 5, 11));
 		
-		
-//		
-//		//creando JSON de los objetos
+				
+		//creando JSON de los objetos
 		
 		CrearJSON crearJSON = new CrearJSON();
 		crearJSON.creaJson(cliente);
@@ -57,7 +56,7 @@ public class App {
 		crearJSON.creaJson(apuesta4);
 
 		
-//		// InserCión de los objetos en la base de datos
+		// InserCión de los objetos en la base de datos
 		Registrador registrarCliente = new Registrador();
 		registrarCliente.insertrSocio(conexion, cliente);
 		registrarCliente.insertrSocio(conexion, cliente2);
@@ -74,7 +73,7 @@ public class App {
 		registrarApuesta.insertarApuesta(conexion, apuesta3);
 		registrarApuesta.insertarApuesta(conexion, apuesta4);
 		
-		
+		//Seleccionamos los datos de la base de datos que queremos recuperar
 		Select pruebaSelect = new Select();
 		
 		Cliente cliente5 = pruebaSelect.selectCliente(conexion, cliente2.getCorreo());
