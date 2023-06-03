@@ -39,7 +39,6 @@ public class App {
 		
 				
 		//creando JSON de los objetos
-		
 		CrearJSON crearJSON = new CrearJSON();
 		crearJSON.creaJson(cliente);
 		crearJSON.creaJson(sorteo);
